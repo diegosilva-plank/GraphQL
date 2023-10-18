@@ -12,6 +12,9 @@ async function bootstrap() {
             AppointmentsResolver,
         ],
         emitSchemaFile: path.resolve(__dirname, 'schema.gql'),
+        validate: {
+            forbidUnknownValues: false,
+        }
     })
 
     const server = new ApolloServer({
